@@ -56,7 +56,7 @@ class UserInfo extends React.Component {
             }}
           />
 
-          <label> Your Address</label>
+          <label> Your Address </label>
           <input
             value={this.state.address}
             type="text"
