@@ -4,18 +4,21 @@ import React from "react";
 import UserInfo from "./UserInfo";
 import DisplayInfo from "./DisplayInfo";
 class MyComponent extends React.Component {
+  state = {
+    listUsers: [
+      { id: 1, name: "Nancy", age: 20, address: "Ho Chi Minh" },
+      { id: 2, name: "John", age: 30, address: "Seoul" },
+      { id: 3, name: "Shin", age: 27, address: "Ha Noi" },
+    ],
+  };
   // JSX
   render() {
-    const ageW = 50;
-    const myInfo = ["abc", "c", "a"];
     return (
       <div>
         <UserInfo></UserInfo>
         <br />
         <br />
-        <DisplayInfo name="Nancy" age="30" />
-        <hr />
-        <DisplayInfo name="Eric" age={ageW} myInfo={myInfo} />
+        <DisplayInfo listUsers={this.state.listUsers} />
       </div>
     );
   }
