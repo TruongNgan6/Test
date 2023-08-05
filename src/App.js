@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { increaseCounter, decreaseCounter } from "./redux/action/counterAction";
 import MyComponent from "./components/MyComponent";
 import React from "react";
+import ShowHideList from "./newcomponents/Showhidelist";
 
 class App extends React.Component {
   render() {
@@ -11,6 +12,7 @@ class App extends React.Component {
       <div>
         Hello World
         <MyComponent></MyComponent>
+        <ShowHideList></ShowHideList>
       </div>
     );
   }
